@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Custom styles for sushi app */
+:root {
+  --primary: #0ea5e9; /* Sky blue for freshness */
+  --secondary: #10b981; /* Emerald for sushi */
+  --accent: #f59e0b; /* Amber for highlights */
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
