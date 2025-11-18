@@ -5,7 +5,8 @@ import Script from "next/script";
 import "./globals.css";
 // Import all available fonts for AI usage
 import "../lib/fonts";
-import Navbar from "@/components/custom/navbar";
+import NavbarBrasa from "@/components/custom/navbar-brasa";
+import WhatsAppButton from "@/components/custom/whatsapp-button-brasa";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sushi Express - Order Management",
-  description: "Professional sushi restaurant management system",
+  title: "Sushi Brasa - Comida Japonesa Premium",
+  description: "Sushi artesanal com toque de brasa. Peça agora e receba em casa!",
 };
 
 export default function RootLayout({
@@ -28,17 +29,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <Script src="/lasy-bridge.js" strategy="beforeInteractive" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
-        <Navbar />
+        <NavbarBrasa />
         <main className="min-h-screen">
           {children}
         </main>
+        <WhatsAppButton />
       </body>
     </html>
   );
